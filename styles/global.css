@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+body {
+    background-color: #171717;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 10vw 0 10vw;
+}
+
+footer {
+    padding: 0 10vw 0 10vw;
+}
+
+a {
+    color: #ADACAC;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0080B7;
+}
+
+h1 {
+    margin-top: 7vh; 
+    font-size: 5em;
+    font-weight: 700;
+}
+
+header {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+header::before {
+    content: ' ';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../public/samuele-errico-piccarini-FMbWFDiVRPs-unsplash.webp);
+    background-size: cover;
+    background-position: center;
+    -webkit-filter: opacity(0.5);
+    -moz-filter: opacity(0.5);
+    -o-filter: opacity(0.5);
+    -ms-filter: opacity(0.5);
+    filter: opacity(0.5);
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+p {
+    font-size: 1.9em;
+    color: #ADACAC;
+}
+
+input {
+    height: 6vh;
+    width: 23vw;
+    padding-left: 1vw;
+    border: 2px solid #ADACAC;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+input::placeholder {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+button {
+    background-color: #EFEFEF;
+    color: #171717;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+span {
+    display: flex;
+    flex-direction: row;
+}
