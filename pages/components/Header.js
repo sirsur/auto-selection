@@ -1,21 +1,26 @@
 import Navbar from './Header/Navbar';
 import styles from '../../styles/component.module.css';
 import { BiChevronsDown } from 'react-icons/bi';
+import { BsTextRight } from 'react-icons/bs';
+import Link from "next/link";
 
 /*
-    TODO: specify div for icon
+    TODO: 
+        1. specify div for icon
+        2. media styles
 */
 
 export default function Header() {
     return (
         <header>
-            <div className={styles.header_div}>
-                <Navbar />
-                <h1>СРОЧНЫЙ ВЫКУП АВТО В</h1>
-                <h1 className={styles.header_h1_blue}>НИЖНЕМ НОВГОРОДЕ И ОБЛАСТИ</h1>
-            </div>
+            <Navbar />
+            <BsTextRight className={styles.header_navbar_icon} />
+            <h1>СРОЧНЫЙ ВЫКУП АВТО В</h1>
+            <h1 className={styles.header_h1_blue}>НИЖНЕМ НОВГОРОДЕ И ОБЛАСТИ</h1>
             <div className={styles.header_icon_flex}>
-                <BiChevronsDown className={styles.header_icon} />
+                <Link href="#review">
+                    <BiChevronsDown className={styles.header_icon} />
+                </Link>
             </div>
         </header>
     )

@@ -9,13 +9,12 @@ body {
 }
 
 section {
-    display: flex;
+    display: flexbox;
     flex-direction: column;
     height: 100%;
-    padding: 0 10vw 0 10vw;
 }
 
-footer {
+header, section, footer {
     padding: 0 10vw 0 10vw;
 }
 
@@ -35,11 +34,16 @@ h1 {
 }
 
 header {
-    position: relative;
-    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
+    background-image: url(../public/samuele-errico-piccarini-FMbWFDiVRPs-unsplash.png);
+    background-size: cover;
+    background-position: center;
 }
 
+/*
 header::before {
     content: ' ';
     position: absolute;
@@ -56,6 +60,7 @@ header::before {
     -ms-filter: opacity(0.5);
     filter: opacity(0.5);
 }
+*/
 
 h2 {
     font-size: 2.5em;
@@ -96,4 +101,66 @@ button {
 span {
     display: flex;
     flex-direction: row;
+}
+
+@media (min-width: 1024px) and (max-width: 1400px) {
+    header {
+        background-position: right 10% bottom;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+}
+
+@media (min-width: 750px) and (max-width: 1024px) {
+    header {
+        background-position: right 10% bottom;
+    }
+
+    h1 {
+        font-size: 4.5em;
+    }
+}
+
+@media (min-width: 450px) and (max-width: 750px) {
+    header {
+        background-position: right 10% bottom;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 450px) {
+    header {
+        background-position: right 10% bottom;
+    }
+
+    /*
+        check later on mobile. maybe its reasonable to
+        set h1 on center
+    */
+    h1 {
+        justify-self: center;
+        align-self: center;
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 350px) {
+    header {
+        background-position: right 10% bottom;
+    }
+
+    /*
+        check later on mobile. maybe its reasonable to
+        set h1 on center
+    */
+    h1 {
+        justify-self: center;
+        align-self: center;
+        font-size: 2.5em;
+    }
 }

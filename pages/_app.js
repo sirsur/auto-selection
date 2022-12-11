@@ -1,5 +1,10 @@
 import '../styles/global.css';
 import { Roboto } from '@next/font/google';
+import Head from 'next/head';
+
+/*
+    TODO: add SEO settings
+*/
 
 const roboto = Roboto({
     weight: ['300', '500', '700', '900'],
@@ -9,6 +14,9 @@ const roboto = Roboto({
 function MyApp({ Component, pageProps }) {
     return (
         <>
+            <Head>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </Head>
             <style jsx global>{`
                 html {
                     font-family: ${roboto.style.fontFamily};
