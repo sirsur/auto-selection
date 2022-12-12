@@ -16,8 +16,103 @@
     height: 3vh;
 }
 
+.header_navbar_icon,
 .header_navbar_icon path {
     color: #EFEFEF;
+}
+
+.header_navbar_icon:hover,
+.header_navbar_icon:hover path {
+    color: #0080B7;
+}
+
+.header_button {
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.sidebar {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 0 -6vh -10vw;
+    background-color: #EFEFEF;
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+.top_sidebar {
+    padding: 6vh 10vw 0 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.hide_sidebar_icon {
+    width: 3vh;
+    height: 3vh;
+}
+
+.hide_sidebar_icon,
+.hide_sidebar_icon path {
+    color: #171717;
+}
+
+.hide_sidebar_icon:hover,
+.hide_sidebar_icon:hover path {
+    color: #0080B7;
+}
+
+.sidebar_navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.sidebar_navigation a {
+    color: #171717;
+}
+
+.sidebar_navigation a:hover {
+    color: #0080B7;
+}
+
+.bottom_sidebar {
+    padding: 0 10vw 6vh 10vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.bottom_sidebar span {
+    gap: 2vw;
+}
+
+.bottom_sidebar p {
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: #ADACAC;
+}
+
+.sidebar_bottom_icons {
+    width: 3vh;
+    height: 3vh;
+}
+
+.sidebar_bottom_icons,
+.sidebar_bottom_icons path {
+    color: #ADACAC;
+}
+
+.sidebar_bottom_icons:hover,
+.sidebar_bottom_icons:hover path {
+    color: #0080B7;
 }
 
 .header_h1_blue {
@@ -125,9 +220,10 @@
 
 .questions_button {
     background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
 }
 
-.questions_icons  {
+.questions_icons path  {
     color: #0080B7;
 }
 
@@ -170,7 +266,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 10vw;
     background-color: #EFEFEF;
 }
 
@@ -281,9 +376,14 @@
     color: #171717;
 }
 
+@media (min-width: 1024px) {
+    .sidebar {
+        visibility: hidden;
+    }
+}
+
 @media (min-width: 1024px) and (max-width: 1400px) {
     .navbar {
-        font-size: 1.3rem;
         gap: 8vw;
     }
 }
@@ -294,6 +394,7 @@
         height: 0;
         width: 0;
     }
+
     .header_navbar_icon {
         visibility: visible;
     }
@@ -305,6 +406,7 @@
         height: 0;
         width: 0;
     }
+
     .header_navbar_icon {
         visibility: visible;
     }
@@ -316,6 +418,7 @@
         height: 0;
         width: 0;
     }
+
     .header_navbar_icon {
         visibility: visible;
     }
@@ -327,7 +430,16 @@
         height: 0;
         width: 0;
     }
+
     .header_navbar_icon {
         visibility: visible;
+    }
+
+    .sidebar {
+        font-size: 1rem;
+    }
+
+    .bottom_sidebar p {
+        font-size: 1rem;
     }
 }

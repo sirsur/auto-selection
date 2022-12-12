@@ -1,4 +1,5 @@
 * {
+    overflow-x: hidden;
     padding: 0;
     margin: 0;
     color: #FFFFFF;
@@ -28,7 +29,7 @@ a:hover {
 }
 
 h1 {
-    margin-top: 7vh; 
+    margin-top: 6vh; 
     font-size: 5em;
     font-weight: 700;
 }
@@ -119,7 +120,12 @@ span {
     }
 
     h1 {
+        margin-top: 12vh; 
         font-size: 4.5em;
+    }
+
+    footer {
+        display: none;
     }
 }
 
@@ -129,7 +135,12 @@ span {
     }
 
     h1 {
-        font-size: 4em;
+        margin-top: 12vh;
+        font-size: 3.5em;
+    }
+
+    footer {
+        display: none;
     }
 }
 
@@ -143,9 +154,14 @@ span {
         set h1 on center
     */
     h1 {
+        margin-top: 12vh;
         justify-self: center;
         align-self: center;
         font-size: 3em;
+    }
+
+    footer {
+        display: none;
     }
 }
 
@@ -153,14 +169,15 @@ span {
     header {
         background-position: right 10% bottom;
     }
-
-    /*
-        check later on mobile. maybe its reasonable to
-        set h1 on center
-    */
+    
     h1 {
+        margin-top: 12vh;
         justify-self: center;
         align-self: center;
         font-size: 2.5em;
+    }
+
+    footer {
+        display: none;
     }
 }

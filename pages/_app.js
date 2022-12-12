@@ -3,7 +3,9 @@ import { Roboto } from '@next/font/google';
 import Head from 'next/head';
 
 /*
-    TODO: add SEO settings
+    TODO: 
+    1. add SEO settings
+    2. check state in firefox
 */
 
 const roboto = Roboto({
