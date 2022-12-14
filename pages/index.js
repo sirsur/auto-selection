@@ -19,14 +19,14 @@ import Comment from './components/Comment';
 export default function Main() {
     return (
         <>
-        <Header />
-        <Review />
-        <Documents />
-        <Questions />
-        <Benefits />
-        <Feedback />
-        <Comment />
-        <Footer />
+            <Header />
+            <Review />
+            <Documents />
+            <Questions />
+            <Benefits />
+            <Feedback />
+            <Comment />
+            <Footer />
         </>
     )
 };

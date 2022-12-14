@@ -139,13 +139,44 @@
 }
 
 .review_form {
+    margin-top: 5vh;
     display: grid;
     row-gap: 2vh;
-    column-gap: 3vw;
+    column-gap: 2vw;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    justify-content: cetner;
+    justify-content: center;
     align-content: center;
+}
+
+.review_form_units {
+    position: relative;
+    height: 7vh;
+}
+
+.review_form_units input {
+    position: absolute;
+    padding: 1.5vh 0 0 2vh;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.review_form_units label {
+    padding: 2.3vh 0 0 2vh;
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ADACAC;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+
+.review_form_units input:focus ~ label,
+.review_form_units input:valid ~ label {
+    font-size: 0.6rem;
+    padding: 1.5vh 0 0 2vh;
 }
 
 .review_form_photo {
@@ -154,7 +185,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
     border: dashed #ADACAC;
     border-radius: 10px;
     cursor: pointer;
@@ -162,11 +192,19 @@
 
 .review_form_photo::placeholder {
     text-align: center;
+    font-weight: 500;
 }
 
-.review_form_photo>p {
-    font-size: 1.3rem;
+.review_form_photo p {
+    font-size: 1.2rem;
     font-weight: 500;
+    text-align: center;
+}
+
+.form_photos_array {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #ADACAC;
 }
 
 .review_icon {
@@ -181,9 +219,15 @@
 }
 
 .review_disclaimer {
+    margin-top: 1vh;
     align-self: flex-end;
-    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.review_disclaimer p {
     width: 30%;
+    text-align: center;
     font-size: 1em;
     color: #ADACAC;
     font-weight: 300;

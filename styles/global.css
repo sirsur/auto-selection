@@ -10,12 +10,13 @@ body {
 }
 
 section {
-    display: flexbox;
+    padding: 5vh 10vw 5vh 10vw;
+    display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-header, section, footer {
+header, footer {
     padding: 0 10vw 0 10vw;
 }
 
@@ -73,21 +74,20 @@ p {
 }
 
 input {
-    height: 6vh;
-    width: 23vw;
-    padding-left: 1vw;
+    height: 7vh;
     border: 2px solid #ADACAC;
     border-radius: 10px;
     background-color: transparent;
 }
 
-input::placeholder {
-    font-size: 1.3em;
-    font-weight: 500;
-}
-
 input[type="file"] {
     display: none;
+    cursor: pointer;
+}
+
+input:focus, input:valid {
+    outline: none;
+    border: 2px solid #0080B7;
 }
 
 button {
@@ -97,11 +97,16 @@ button {
     border-radius: 10px;
     font-size: 1.3em;
     font-weight: 500;
+    cursor: pointer;
 }
 
 span {
     display: flex;
     flex-direction: row;
+}
+
+#review p {
+    margin-top: 1vh;
 }
 
 @media (min-width: 1024px) and (max-width: 1400px) {
