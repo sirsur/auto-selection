@@ -45,31 +45,12 @@ header {
     background-position: center;
 }
 
-/*
-header::before {
-    content: ' ';
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(../public/samuele-errico-piccarini-FMbWFDiVRPs-unsplash.webp);
-    background-size: cover;
-    background-position: center;
-    -webkit-filter: opacity(0.5);
-    -moz-filter: opacity(0.5);
-    -o-filter: opacity(0.5);
-    -ms-filter: opacity(0.5);
-    filter: opacity(0.5);
-}
-*/
-
 h2 {
     font-size: 2.5em;
 }
 
 p {
-    font-size: 1.9em;
+    font-size: 1.9rem;
     color: #ADACAC;
 }
 
@@ -109,9 +90,17 @@ span {
     margin-top: 1vh;
 }
 
+#questions h2 {
+    margin-bottom: 4vh;
+}
+
 @media (min-width: 1024px) and (max-width: 1400px) {
     header {
         background-position: right 10% bottom;
+    }
+
+    p {
+        font-size: 1.5rem;
     }
 
     h1 {
@@ -122,6 +111,10 @@ span {
 @media (min-width: 750px) and (max-width: 1024px) {
     header {
         background-position: right 10% bottom;
+    }
+
+    p {
+        font-size: 1.4rem;
     }
 
     h1 {
@@ -152,6 +145,10 @@ span {
         font-size: 1.8em;
     }
 
+    p {
+        font-size: 1.2rem;
+    }
+
     footer {
         display: none;
     }
@@ -177,6 +174,10 @@ span {
         font-size: 2.3em;
     }
 
+    p {
+        font-size: 1rem;
+    }
+
     footer {
         display: none;
     }
@@ -196,6 +197,10 @@ span {
 
     h2 {
         font-size: 1.8em;
+    }
+
+    p {
+        font-size: 0.9rem;
     }
 
     footer {

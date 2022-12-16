@@ -305,13 +305,75 @@
     stroke: #EFEFEF;
 }
 
-.questions_button {
+.all_questions {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.button_flex {
+    display: flex;
+    align-items: center;
+    margin: 0 5vw 0 5vw;
+    padding: 0 2vw 0 2vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #EFEFEF;
+    border-radius: 15px;
+}
+
+.button_flex button {
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0);
     cursor: pointer;
 }
 
+.questions_rect p {
+    margin: 3vh 3vw 3vh 0;
+    text-align: left;
+    color: #EFEFEF;
+}
+
+.questions_rect {
+    height: 100%;
+    align-items: center;
+}
+
+.questions_rect div {
+    width: 20%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.questions_icons  {
+    height: 3vmin;
+    width: 3vmin;
+    color: #EFEFEF;
+}
+
 .questions_icons path  {
+    color: #EFEFEF;
+}
+
+.button_flex:hover {
+    border: 2px solid #0080B7;
+}
+
+.button_flex:hover .questions_icons,
+.button_flex:hover .questions_icons path {
     color: #0080B7;
+}
+
+.answers {
+    margin: 0 5vw 0 5vw;
+    padding: 0 3vw 0 3vw;
+    color: #EFEFEF;
+}
+
+.answers p {
+    color: #EFEFEF;
 }
 
 .benefits_grid {
@@ -559,10 +621,6 @@
         visibility: visible;
     }
 
-    .doc_rect p {
-        font-size: 1.3rem;
-    }
-
     .doc_icons {
         width: 4vh;
         height: 4vh;
@@ -575,8 +633,13 @@
         grid-template-rows: repeat(4, 22vh);
     }
 
-    .doc_rect {
+    .button_flex {
         padding: 0 5vw 0 5vw;
+    }
+
+    .questions_icons  {
+        height: 4vmin;
+        width: 4vmin;
     }
 }
 
@@ -617,5 +680,26 @@
 
     .doc_rect {
         padding: 0 5vw 0 5vw;
+    }
+
+    .doc_icons {
+        width: 6vh;
+        height: 6vh;
+        margin-bottom: 2vh;
+    }
+
+    .doc_table {
+        row-gap: 3vh;
+        grid-template-columns: repeat(1, 60vw);
+        grid-template-rows: repeat(4, 22vh);
+    }
+
+    .button_flex {
+        padding: 0 5vw 0 5vw;
+    }
+
+    .questions_icons  {
+        height: 4vmin;
+        width: 4vmin;
     }
 }
