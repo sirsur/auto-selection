@@ -98,6 +98,10 @@ span {
     margin-bottom: 4vh;
 }
 
+#benefits {
+    margin-bottom: 4vh;
+}
+
 @media (min-width: 1024px) and (max-width: 1400px) {
     header {
         background-position: right 10% bottom;
