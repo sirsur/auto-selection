@@ -129,6 +129,10 @@ span {
         font-size: 4.5em;
     }
 
+    h2 {
+        font-size: 2em;
+    }
+
     footer {
         display: none;
     }
@@ -142,6 +146,10 @@ span {
     h1 {
         margin-top: 12vh;
         font-size: 3.5em;
+    }
+
+    h2 {
+        font-size: 1.8em;
     }
 
     footer {
@@ -165,6 +173,10 @@ span {
         font-size: 3em;
     }
 
+    h2 {
+        font-size: 2.3em;
+    }
+
     footer {
         display: none;
     }
@@ -180,6 +192,10 @@ span {
         justify-self: center;
         align-self: center;
         font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.8em;
     }
 
     footer {

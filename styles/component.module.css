@@ -173,8 +173,8 @@
     transition: 0.2s ease all;
 }
 
-.review_form_units input:focus ~ label,
-.review_form_units input:valid ~ label {
+.review_form input:focus ~ label,
+.review_form input:valid ~ label {
     font-size: 0.6rem;
     padding: 1.5vh 0 0 2vh;
 }
@@ -188,6 +188,14 @@
     border: dashed #ADACAC;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.review_form_photo:has(input:valid, input:focus) {
+    border: dashed #0080B7;
+}
+
+.review_form_photo:has(input:invalid) {
+    border: dashed #ADACAC;
 }
 
 .review_form_photo::placeholder {
@@ -218,6 +226,26 @@
     color: #ADACAC;
 }
 
+.form_files_span {
+    margin: 0 1vw 0 1vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_files_span p {
+    width: 90%;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.form_files_span button {
+    width: 10%;
+    background-color: #171717;
+    color: #EFEFEF;
+    font-weight: 300;
+    font-size: 1em;
+}
+
 .review_disclaimer {
     margin-top: 1vh;
     align-self: flex-end;
@@ -238,24 +266,39 @@
 }
 
 .doc_h2 {
+    margin-bottom: 4vh;
     color: #171717;
 }
 
 .doc_table {
     display: grid;
-    row-gap: 1vh;
-    column-gap: 3vw;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    justify-content: cetner;
+    row-gap: 4vh;
+    column-gap: 6vw;
+    grid-template-columns: repeat(2, 26vmax);
+    grid-template-rows: repeat(2, 26vmin);
+    justify-content: center;
     align-content: center;
 }
 
 .doc_rect {
-    height: 100%;
-    width: 100%;
+    padding: 0 2vmax 0 2vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border-radius: 15px;
     background-color: #171717;
+}
+
+.doc_rect p {
+    color: #EFEFEF;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.doc_icons {
+    width: 5vmin;
+    height: 5vmin;
+    margin-bottom: 2vh;
 }
 
 .doc_icons path {
@@ -420,6 +463,21 @@
     color: #171717;
 }
 
+@media (min-width: 1400px) {
+    .sidebar {
+        visibility: hidden;
+    }
+
+    .doc_rect p {
+        font-size: 1.5rem;
+    }
+
+    .doc_table {
+        grid-template-columns: repeat(2, 23vw);
+        grid-template-rows: repeat(2, 22vh);
+    }
+}
+
 @media (min-width: 1024px) {
     .sidebar {
         visibility: hidden;
@@ -430,9 +488,13 @@
     .navbar {
         gap: 8vw;
     }
+
+    .doc_rect p {
+        font-size: 1.5rem;
+    }
 }
 
-@media (min-width: 750px) and (max-width: 1024px) {
+@media (min-width: 750px) and (max-width: 1023px) {
     .navbar {
         visibility: hidden;
         height: 0;
@@ -441,6 +503,16 @@
 
     .header_navbar_icon {
         visibility: visible;
+    }
+
+    .doc_rect p {
+        font-size: 1.1rem;
+    }
+
+    .doc_icons {
+        width: 4.5vh;
+        height: 4.5vh;
+        margin-bottom: 2vh;
     }
 }
 
@@ -454,6 +526,26 @@
     .header_navbar_icon {
         visibility: visible;
     }
+
+    .doc_rect p {
+        font-size: 0.9rem;
+    }
+
+    .doc_icons {
+        width: 5vh;
+        height: 5vh;
+        margin-bottom: 2vh;
+    }
+
+    .doc_table {
+        row-gap: 3vh;
+        grid-template-columns: repeat(1, 40vw);
+        grid-template-rows: repeat(4, 21vh);
+    }
+
+    .doc_rect {
+        padding: 0 3vw 0 3vw;
+    }
 }
 
 @media (min-width: 350px) and (max-width: 450px) {
@@ -465,6 +557,26 @@
 
     .header_navbar_icon {
         visibility: visible;
+    }
+
+    .doc_rect p {
+        font-size: 1.3rem;
+    }
+
+    .doc_icons {
+        width: 4vh;
+        height: 4vh;
+        margin-bottom: 2vh;
+    }
+
+    .doc_table {
+        row-gap: 3vh;
+        grid-template-columns: repeat(1, 60vw);
+        grid-template-rows: repeat(4, 22vh);
+    }
+
+    .doc_rect {
+        padding: 0 5vw 0 5vw;
     }
 }
 
@@ -485,5 +597,25 @@
 
     .bottom_sidebar p {
         font-size: 1rem;
+    }
+
+    .doc_rect p {
+        font-size: 0.9rem;
+    }
+
+    .doc_icons {
+        width: 5vh;
+        height: 5vh;
+        margin-bottom: 2vh;
+    }
+
+    .doc_table {
+        row-gap: 3vh;
+        grid-template-columns: repeat(1, 55vw);
+        grid-template-rows: repeat(4, 24vh);
+    }
+
+    .doc_rect {
+        padding: 0 5vw 0 5vw;
     }
 }
