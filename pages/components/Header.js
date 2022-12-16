@@ -42,10 +42,10 @@ export default function Header() {
                     </div>
                     <div className={styles.bottom_sidebar}>
                         <span>
-                            <Link href="https://api.whatsapp.com/send?phone=89324388546">
+                            <Link href="https://api.whatsapp.com/send?phone=89873937976">
                                 <BsWhatsapp className={styles.sidebar_bottom_icons} />
                             </Link>
-                            <Link href="https://telegram.me/de4nny">
+                            <Link href="https://telegram.me/misterkrabZZZ">
                                 <BsTelegram className={styles.sidebar_bottom_icons} />
                             </Link>
                         </span>
