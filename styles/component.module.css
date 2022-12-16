@@ -320,6 +320,7 @@
     background-color: rgba(0, 0, 0, 0);
     border: 2px solid #EFEFEF;
     border-radius: 15px;
+    transition: 0.2s ease all;
 }
 
 .button_flex button {

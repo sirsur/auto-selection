@@ -2,7 +2,7 @@ import styles from '../../styles/component.module.css';
 
 export default function Benefits() {
     return (
-        <section>
+        <section id='benefits'>
             <h2>Почему стоит обратиться именно к нам</h2>
             <div className={styles.benefits_grid}>
                 <div className={styles.benefits_time}>
