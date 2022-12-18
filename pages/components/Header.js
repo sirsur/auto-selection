@@ -49,8 +49,8 @@ export default function Header() {
                                 <BsTelegram className={styles.sidebar_bottom_icons} />
                             </Link>
                         </span>
-                        <p>89123456789</p>
-                        <p>auto_selection_nn@gmail.com</p>
+                        <p>89873937976</p>
+                        <p>auto.selection.nn@mail.ru</p>
                     </div>
                 </motion.div>
             }

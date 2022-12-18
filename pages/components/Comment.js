@@ -1,12 +1,6 @@
 import styles from '../../styles/component.module.css';
 import { useState } from 'react';
 
-/*
-    TODO:
-    1. add disabled button
-    2. media
-*/
-
 export default function Comment() {
     const [name, setName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
