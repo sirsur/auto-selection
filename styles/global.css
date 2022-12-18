@@ -61,17 +61,25 @@ input {
     background-color: transparent;
 }
 
+textarea {
+    border: 2px solid #ADACAC;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
 input[type="file"] {
     display: none;
     cursor: pointer;
 }
 
-input:focus, input:valid {
+input:focus, input:valid,
+textarea:focus, textarea:valid {
     outline: none;
     border: 2px solid #0080B7;
 }
 
 button {
+    height: calc(4.5vh + 1.2rem);
     background-color: #EFEFEF;
     color: #171717;
     border: none;
@@ -81,20 +89,22 @@ button {
     cursor: pointer;
 }
 
+button[disabled] {
+    height: calc(4.5vh + 1.2rem);
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 span {
     display: flex;
     flex-direction: row;
 }
 
-#review p {
+#review p, #comment p {
     margin-top: 1vh;
 }
 
-#questions h2 {
-    margin-bottom: 4vh;
-}
-
-#benefits h2 {
+#questions h2, #benefits h2 {
     margin-bottom: 4vh;
 }
 
@@ -102,7 +112,29 @@ span {
     margin-bottom: 4vh;
 }
 
-@media (min-width: 1024px) and (max-width: 1400px) {
+#feedback {
+    overflow-y: hidden;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #EFEFEF;
+}
+
+#feedback h1 {
+    margin: 0;
+    font-size: 12.5em;
+    font-weight: 900;
+    color: #0080B7;
+}
+
+#feedback h2 {
+    font-size: 4em;
+    font-weight: 700;
+    color: #171717;
+}
+
+@media (min-width: 1026px) and (max-width: 1400px) {
     header {
         background-position: right 10% bottom;
     }
@@ -116,7 +148,7 @@ span {
     }
 }
 
-@media (min-width: 750px) and (max-width: 1024px) {
+@media (min-width: 750px) and (max-width: 1025px) {
     header {
         background-position: right 10% bottom;
     }
@@ -156,7 +188,7 @@ span {
     p {
         font-size: 1.2rem;
     }
-
+    
     footer {
         display: none;
     }
@@ -186,6 +218,10 @@ span {
         font-size: 1rem;
     }
 
+    #review p, #comment p {
+        font-size: 1.5rem;
+    }
+
     footer {
         display: none;
     }
@@ -209,6 +245,14 @@ span {
 
     p {
         font-size: 0.9rem;
+    }
+
+    #review p, #comment p {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 1rem;
     }
 
     footer {
