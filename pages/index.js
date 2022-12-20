@@ -9,11 +9,15 @@ import Comment from './components/Comment';
 
 /*
     TODO:
-        1. make all the rest styles
-        2. make email in gmail
-        3. make script for submiting and sending the review and comment
-        4. make carousel
-        5. make links to telegram and whatsapp
+        1. bag with sidebar scroll down (done with half!)
+        2. make animation in questions more accurate
+        3. chech for small devices fonts sizes
+        4. check in header title (make it in center) (done!)
+        5. check size of carousel items
+        6. check size of sidebar icon for small devices
+        7. check size of text in carousel items
+        8. all tasks in review
+        9. change ease in feedbacks
 */
 
 export default function Main() {

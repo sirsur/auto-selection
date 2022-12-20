@@ -54,8 +54,10 @@ export default function Header() {
                     </div>
                 </motion.div>
             }
-            <h1>СРОЧНЫЙ ВЫКУП АВТО В</h1>
-            <h1 className={styles.header_h1_blue}>НИЖНЕМ НОВГОРОДЕ И ОБЛАСТИ</h1>
+            <div className={styles.header_title}>
+                <h1>СРОЧНЫЙ ВЫКУП АВТО В</h1>
+                <h1 className={styles.header_h1_blue}>НИЖНЕМ НОВГОРОДЕ И ОБЛАСТИ</h1>
+            </div>
             <div className={styles.header_icon_flex}>
                 <Link href="#review">
                     <BiChevronsDown className={styles.header_icon} />

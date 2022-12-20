@@ -33,7 +33,7 @@
 }
 
 .sidebar {
-    position: absolute;
+    position: fixed;
     height: 100vh;
     width: 100vw;
     z-index: 1;
@@ -115,6 +115,13 @@
     color: #0080B7;
 }
 
+.header_title {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .header_h1_blue {
     margin-top: 0;
     color: #0080B7;
@@ -128,13 +135,10 @@
     margin-bottom: 6vh;
 }
 
-.header_icon {
+.header_icon,
+.header_icon path {
     width: 5vh;
     height: 5vh;
-    color: #0080B7;
-}
-
-.header_icon path {
     color: #0080B7;
 }
 
@@ -583,7 +587,15 @@
     }
 
     .header_navbar_icon {
+        height: 3.5vh;
+        width: 3.5vh;
         visibility: visible;
+    }
+    
+    .header_icon,
+    .header_icon path {
+        height: 6vh;
+        width: 6vh;
     }
 
     .doc_rect p {
@@ -657,7 +669,15 @@
     }
 
     .header_navbar_icon {
+        height: 3.5vh;
+        width: 3.5vh;
         visibility: visible;
+    }
+    
+    .header_icon,
+    .header_icon path {
+        height: 6vh;
+        width: 6vh;
     }
 
     .doc_rect p {
@@ -758,7 +778,15 @@
     }
 
     .header_navbar_icon {
+        height: 4vh;
+        width: 4vh;
         visibility: visible;
+    }
+    
+    .header_icon,
+    .header_icon path {
+        height: 6vh;
+        width: 6vh;
     }
 
     .doc_icons {
@@ -861,7 +889,15 @@
     }
 
     .header_navbar_icon {
+        height: 4.5vh;
+        width: 4.5vh;
         visibility: visible;
+    }
+    
+    .header_icon,
+    .header_icon path {
+        height: 7vh;
+        width: 7vh;
     }
 
     .sidebar {

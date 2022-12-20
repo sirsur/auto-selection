@@ -9,7 +9,7 @@ body, html {
 }
 
 body {
-    position:relative;
+    position: relative;
     background-color: #171717;
 }
 
@@ -34,7 +34,6 @@ a:hover {
 }
 
 h1 {
-    margin-top: 6vh; 
     font-size: 5em;
     font-weight: 700;
 }
@@ -194,7 +193,6 @@ footer a {
     }
 
     h1 {
-        margin-top: 12vh; 
         font-size: 4.5em;
     }
 
@@ -232,7 +230,6 @@ footer a {
     }
 
     h1 {
-        margin-top: 12vh;
         font-size: 3.5em;
     }
 
@@ -271,15 +268,8 @@ footer a {
     header {
         background-position: right 10% bottom;
     }
-
-    /*
-        check later on mobile. maybe its reasonable to
-        set h1 on center
-    */
+    
     h1 {
-        margin-top: 12vh;
-        justify-self: center;
-        align-self: center;
         font-size: 3em;
     }
 
@@ -324,9 +314,6 @@ footer a {
     }
     
     h1 {
-        margin-top: 12vh;
-        justify-self: center;
-        align-self: center;
         font-size: 2.5em;
     }
 
