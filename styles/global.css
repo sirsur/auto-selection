@@ -264,7 +264,51 @@ footer a {
     }
 }
 
-@media (min-width: 350px) and (max-width: 450px) {
+@media (min-width: 380px) and (max-width: 450px) {
+    header {
+        background-position: right 10% bottom;
+    }
+    
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2.3em;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    #comment p {
+        font-size: 1.5rem;
+    }
+
+    #feedback {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    #feedback h1 {
+        font-size: 5.5rem;
+        margin: 0;
+    }
+
+    #feedback h2 {
+        font-size: 2.5rem;
+    }
+
+    #feedback p {
+        font-size: 1rem;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 380px) {
     header {
         background-position: right 10% bottom;
     }

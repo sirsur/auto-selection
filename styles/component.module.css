@@ -599,7 +599,7 @@
     }
 
     .doc_rect p {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     .doc_icons {
@@ -770,7 +770,7 @@
     }
 }
 
-@media (min-width: 350px) and (max-width: 450px) {
+@media (min-width: 380px) and (max-width: 450px) {
     .navbar {
         visibility: hidden;
         height: 0;
@@ -787,6 +787,133 @@
     .header_icon path {
         height: 6vh;
         width: 6vh;
+    }
+
+    .doc_rect {
+        padding: 0 5vw 0 5vw; 
+    }
+
+    .doc_rect p {
+        font-size: 1.2rem;
+    }
+
+    .doc_icons {
+        width: 4vh;
+        height: 4vh;
+        margin-bottom: 2vh;
+    }
+
+    .doc_table {
+        row-gap: 3vh;
+        grid-template-columns: repeat(1, 60vw);
+        grid-template-rows: repeat(4, 22vh);
+    }
+
+    .button_flex {
+        padding: 0 5vw 0 5vw;
+    }
+
+    .questions_icons  {
+        height: 4vmin;
+        width: 4vmin;
+    }
+
+    .benefits_grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .benefits_care, .benefits_time {
+        grid-column: 1;
+    }
+
+    .benefits_grid div {
+        height: 17vh;
+    }
+
+    .benefits_grid p {
+        font-size: 1.2rem;
+        padding: 0 4vw 3vh 4vw;
+    }
+
+    .review_form, 
+    .comment_form {
+        margin-top: 3vh;
+    }
+
+    .comment_form {
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .comment_form_textarea {
+        height: 20vh;
+    }
+
+    .carousel {
+        width: auto;
+        flex-direction: row;
+        gap: 2vw;
+        margin-top: 5vh;
+        padding: 0 402vw 0 0;
+    }
+
+    .carousel_item {
+        height: 33vh;
+        width: 55vw;
+        padding: 0 5vw 0 5vw;
+    }
+
+    .review_form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .review_disclaimer {
+        margin-top: 1vh;
+        align-self: center;
+        display: block;
+    }
+
+    .review_p {
+        font-size: 1.5rem;
+    }
+
+    .disclaimer {
+        width: 100%;
+    }
+
+    .review_form_photo {
+        height: 20vh;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 380px) {
+    .navbar {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+    }
+
+    .header_navbar_icon {
+        height: 4vh;
+        width: 4vh;
+        visibility: visible;
+    }
+    
+    .header_icon,
+    .header_icon path {
+        height: 6vh;
+        width: 6vh;
+    }
+
+    .doc_rect {
+        padding: 0 5vw 0 5vw; 
+    }
+
+    .doc_rect p {
+        font-size: 1.1rem;
     }
 
     .doc_icons {
@@ -929,8 +1056,8 @@
     }
 
     .doc_icons {
-        width: 6vh;
-        height: 6vh;
+        width: 4vh;
+        height: 4vh;
         margin-bottom: 2vh;
     }
 
