@@ -113,7 +113,7 @@ span {
 }
 
 #feedback {
-    overflow-y: hidden;
+    overflow: hidden;
     height: 70vh;
     display: flex;
     flex-direction: row;
@@ -148,6 +148,12 @@ footer a {
     color: #171717;
 }
 
+@media (min-width: 1400px) {
+    #feedback p {
+        font-size: 1.5rem;
+    }
+}
+
 @media (min-width: 1026px) and (max-width: 1400px) {
     header {
         background-position: right 10% bottom;
@@ -159,6 +165,18 @@ footer a {
 
     h1 {
         font-size: 4em;
+    }   
+
+    #feedback h1 {
+        font-size: 8rem;
+    }
+
+    #feedback h2 {
+        font-size: 3.5rem;
+    }
+
+    #feedback p {
+        font-size: 1.2rem;
     }
 }
 
@@ -180,6 +198,25 @@ footer a {
         font-size: 2em;
     }
 
+    #feedback {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    #feedback h1 {
+        font-size: 8rem;
+        margin: 0;
+    }
+
+    #feedback h2 {
+        font-size: 4rem;
+    }
+
+    #feedback p {
+        font-size: 1.2rem;
+    }
+    
+
     footer {
         display: none;
     }
@@ -200,6 +237,24 @@ footer a {
     }
 
     p {
+        font-size: 1.2rem;
+    }
+
+    #feedback {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    #feedback h1 {
+        font-size: 7rem;
+        margin: 0;
+    }
+
+    #feedback h2 {
+        font-size: 3rem;
+    }
+
+    #feedback p {
         font-size: 1.2rem;
     }
     
@@ -236,6 +291,24 @@ footer a {
         font-size: 1.5rem;
     }
 
+    #feedback {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    #feedback h1 {
+        font-size: 5.5rem;
+        margin: 0;
+    }
+
+    #feedback h2 {
+        font-size: 2.5rem;
+    }
+
+    #feedback p {
+        font-size: 1rem;
+    }
+
     footer {
         display: none;
     }
@@ -266,6 +339,24 @@ footer a {
     }
 
     button {
+        font-size: 1rem;
+    }
+
+    #feedback {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    #feedback h1 {
+        font-size: 7rem;
+        margin: 0;
+    }
+
+    #feedback h2 {
+        font-size: 3rem;
+    }
+
+    #feedback p {
         font-size: 1rem;
     }
 
