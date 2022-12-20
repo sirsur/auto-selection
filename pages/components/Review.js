@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 /*
     TODO:
-    1. input files (done) and remove files (done)
+    1. style image input after adding and deleting files
     2. change view of added files 
     3. media styles
     4. add images to form
@@ -83,7 +83,7 @@ export default function Review() {
     return (
         <section id = 'review'>
             <h2>Получите оценку вашего автомобиля</h2>
-            <p>Продайте свой автомобиль в любом состоянии с выгодой. Оставьте заявку, мы оценим и предложим стоимость</p>
+            <p className={styles.review_p}>Продайте свой автомобиль в любом состоянии с выгодой. Оставьте заявку, мы оценим и предложим стоимость</p>
             <form className={styles.review_form} onSubmit={(e) => handleSubmit(e)} >
                 <div className={styles.review_form_units}>
                     <input 
@@ -183,10 +183,14 @@ export default function Review() {
                     />
                     <label>Марка и модель</label>
                 </div>
-                <button type='submit'>Отправить</button>
+                {((email !== '') && (km != '') && (phone !== '') && (year !== '') && (brand !== '')) ?
+                    <button type='submit'>Отправить</button>
+                :
+                    <button type='submit' disabled>Отправить</button>
+                }
             </form>
             <div className={styles.review_disclaimer}>
-                <p>Нажимая кнопку «Отправить» я подтверждаю свое ознакомление с порядком обработки персональных данных и даю свободное и осознанное согласие на их обработку, на получение информации по каналам связи, в том числе в рекламных целях</p>
+                <p className={styles.disclaimer}>Нажимая кнопку «Отправить» я подтверждаю свое ознакомление с порядком обработки персональных данных и даю свободное и осознанное согласие на их обработку, на получение информации по каналам связи, в том числе в рекламных целях</p>
             </div>
         </section>
     )
