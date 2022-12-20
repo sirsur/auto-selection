@@ -4,12 +4,11 @@ import { useState } from 'react';
 
 /*
     TODO:
-    1. style image input after adding and deleting files
+    1. style valid image input
     2. change view of added files 
-    3. media styles
-    4. add images to form
-    5. bug in deleting file
-    6. bug after delete and input file is empty
+    3. send images to email
+    4. bug in deleting file
+    5. bug after delete and input file is empty
 */
 
 export default function Review() {
