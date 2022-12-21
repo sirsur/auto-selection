@@ -413,26 +413,26 @@
 }
 
 .benefits_time {
-    background-image: url(../public/luke-chesser-rCOWMC8qf8A-unsplash.webp);
+    background-image: url('/luke-chesser-rCOWMC8qf8A-unsplash.webp');
     background-size: cover;
     background-position: center;
     grid-column: 1 / 3;
 }
 
 .benefits_price {
-    background-image: url(../public/towfiqu-barbhuiya-JhevWHCbVyw-unsplash.webp);
+    background-image: url('/towfiqu-barbhuiya-JhevWHCbVyw-unsplash.webp');
     background-size: cover;
     background-position: center;
 }
 
 .benefits_safety {
-    background-image: url(../public/erika-fletcher-GJwgw_XqooQ-unsplash.webp);
+    background-image: url('/erika-fletcher-GJwgw_XqooQ-unsplash.webp');
     background-size: cover;
     background-position: center;
 }
 
 .benefits_care {
-    background-image: url(../public/headway-5QgIuuBxKwM-unsplash.webp);
+    background-image: url('/headway-5QgIuuBxKwM-unsplash.webp');
     background-size: cover;
     background-position: center;
     grid-column: 2 / 4;
