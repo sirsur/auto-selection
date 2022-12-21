@@ -130,7 +130,6 @@ export default function Review() {
                         }}
                         accept="image/*"
                         multiple
-                        required 
                         disabled={isDisabled}
                     />
                     {
