@@ -18,6 +18,11 @@ import Comment from './components/Comment';
         7. check size of text in carousel items
         8. all tasks in review
         9. change ease in feedbacks
+        10. make font size smaller
+        11. change margin in header (done!)
+        12. change sidebar margin (done!)
+        13. bug in downloading fonts
+        14. set shadow on carousel items
 */
 
 export default function Main() {

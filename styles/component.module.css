@@ -69,6 +69,10 @@
     color: #0080B7;
 }
 
+.questions_button {
+    display: flex;
+}
+
 .sidebar_navigation {
     display: flex;
     flex-direction: column;
@@ -101,8 +105,8 @@
 }
 
 .sidebar_bottom_icons {
-    width: 3vh;
-    height: 3vh;
+    width: 3.5vh;
+    height: 3.5vh;
 }
 
 .sidebar_bottom_icons,
@@ -113,13 +117,6 @@
 .sidebar_bottom_icons:hover,
 .sidebar_bottom_icons:hover path {
     color: #0080B7;
-}
-
-.header_title {
-    flex-grow: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .header_h1_blue {
@@ -586,7 +583,8 @@
         width: 0;
     }
 
-    .header_navbar_icon {
+    .header_navbar_icon,
+    .hide_sidebar_icon {
         height: 3.5vh;
         width: 3.5vh;
         visibility: visible;
@@ -606,6 +604,13 @@
         width: 4.5vh;
         height: 4.5vh;
         margin-bottom: 2vh;
+    }
+
+    .header_title {
+        flex-grow: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .benefits_grid {
@@ -668,7 +673,8 @@
         width: 0;
     }
 
-    .header_navbar_icon {
+    .header_navbar_icon,
+    .hide_sidebar_icon {
         height: 3.5vh;
         width: 3.5vh;
         visibility: visible;
@@ -678,6 +684,13 @@
     .header_icon path {
         height: 6vh;
         width: 6vh;
+    }
+
+    .header_title {
+        flex-grow: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .doc_rect p {
@@ -777,7 +790,8 @@
         width: 0;
     }
 
-    .header_navbar_icon {
+    .header_navbar_icon,
+    .hide_sidebar_icon {
         height: 4vh;
         width: 4vh;
         visibility: visible;
@@ -787,6 +801,13 @@
     .header_icon path {
         height: 6vh;
         width: 6vh;
+    }
+
+    .header_title {
+        flex-grow: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .doc_rect {
@@ -896,7 +917,8 @@
         width: 0;
     }
 
-    .header_navbar_icon {
+    .header_navbar_icon,
+    .hide_sidebar_icon {
         height: 4vh;
         width: 4vh;
         visibility: visible;
@@ -906,6 +928,13 @@
     .header_icon path {
         height: 6vh;
         width: 6vh;
+    }
+
+    .header_title {
+        flex-grow: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .doc_rect {
@@ -1015,7 +1044,8 @@
         width: 0;
     }
 
-    .header_navbar_icon {
+    .header_navbar_icon,
+    .hide_sidebar_icon {
         height: 4.5vh;
         width: 4.5vh;
         visibility: visible;
@@ -1025,6 +1055,13 @@
     .header_icon path {
         height: 7vh;
         width: 7vh;
+    }
+
+    .header_title {
+        flex-grow: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .sidebar {
