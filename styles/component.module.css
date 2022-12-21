@@ -854,6 +854,14 @@
         width: 0;
     }
 
+    .sidebar_navigation a {
+        font-size: 1.3rem;
+    }
+
+    .bottom_sidebar p {
+        font-size: 1.4rem;
+    }
+
     .header_navbar_icon,
     .hide_sidebar_icon {
         height: 3.5vh;
@@ -992,6 +1000,14 @@
         visibility: hidden;
         height: 0;
         width: 0;
+    }
+
+    .sidebar_navigation a {
+        font-size: 1.1rem;
+    }
+
+    .bottom_sidebar p {
+        font-size: 1.2rem;
     }
 
     .header_navbar_icon,
@@ -1144,6 +1160,10 @@
         visibility: hidden;
         height: 0;
         width: 0;
+    }
+
+    .sidebar_navigation a {
+        font-size: 0.9rem;
     }
 
     .header_navbar_icon,
