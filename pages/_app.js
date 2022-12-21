@@ -2,12 +2,6 @@ import '../styles/global.css';
 import { Roboto } from '@next/font/google';
 import Head from 'next/head';
 
-/*
-    TODO: 
-    1. add SEO settings
-    2. check state in firefox
-*/
-
 const roboto = Roboto({
     weight: ['300', '500', '700', '900'],
     subsets: ['latin'],

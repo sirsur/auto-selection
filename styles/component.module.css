@@ -345,6 +345,7 @@
 }
 
 .questions_rect p {
+    font-size: 1.6rem;
     margin: 3vh 3vw 3vh 0;
     text-align: left;
     color: #EFEFEF;
@@ -388,6 +389,7 @@
 }
 
 .answers p {
+    font-size: 1.4rem;
     color: #EFEFEF;
 }
 
@@ -440,6 +442,11 @@
 .benefits_safety, .benefits_care {
     display: grid;
     align-items: flex-end;
+}
+
+.benefits_time p, .benefits_price p, 
+.benefits_safety p, .benefits_care p {
+    font-size: 1.6rem;
 }
 
 .carousel {
@@ -574,6 +581,19 @@
     .doc_rect p {
         font-size: 1.5rem;
     }
+
+    .benefits_time p, .benefits_price p, 
+    .benefits_safety p, .benefits_care p {
+        font-size: 1.4rem;
+    }
+
+    .answers p {
+        font-size: 1.2rem;
+    }
+
+    .questions_rect p {
+        font-size: 1.4rem;
+    }
 }
 
 @media (min-width: 750px) and (max-width: 1025px) {
@@ -663,6 +683,23 @@
     .carousel_item {
         height: 30vh;
         width: 55vw;
+    }
+
+    .doc_rect p {
+        font-size: 1.5rem;
+    }
+
+    .benefits_time p, .benefits_price p, 
+    .benefits_safety p, .benefits_care p {
+        font-size: 1.4rem;
+    }
+
+    .answers p {
+        font-size: 1.2rem;
+    }
+
+    .questions_rect p {
+        font-size: 1.4rem;
     }
 }
 
@@ -754,7 +791,7 @@
     }
 
     .carousel_item {
-        height: 30vh;
+        height: 35vh;
         width: 55vw;
         padding: 0 5vw 0 5vw;
     }
@@ -771,7 +808,7 @@
     }
 
     .review_p {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .disclaimer {
@@ -779,6 +816,33 @@
     }
 
     .review_form_photo {
+        height: 20vh;
+    }
+
+    .doc_rect p {
+        font-size: 1.5rem;
+    }
+
+    .benefits_time p, .benefits_price p, 
+    .benefits_safety p, .benefits_care p {
+        font-size: 1.4rem;
+    }
+
+    .answers p {
+        font-size: 1.2rem;
+    }
+
+    .questions_rect p {
+        font-size: 1.4rem;
+    }
+
+    .comment_form {
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .comment_form_textarea {
         height: 20vh;
     }
 }
@@ -792,8 +856,8 @@
 
     .header_navbar_icon,
     .hide_sidebar_icon {
-        height: 4vh;
-        width: 4vh;
+        height: 3.5vh;
+        width: 3.5vh;
         visibility: visible;
     }
     
@@ -908,6 +972,19 @@
     .review_form_photo {
         height: 20vh;
     }
+
+    .benefits_time p, .benefits_price p, 
+    .benefits_safety p, .benefits_care p {
+        font-size: 1.2rem;
+    }
+
+    .answers p {
+        font-size: 1rem;
+    }
+
+    .questions_rect p {
+        font-size: 1.2rem;
+    }
 }
 
 @media (min-width: 350px) and (max-width: 380px) {
@@ -919,8 +996,8 @@
 
     .header_navbar_icon,
     .hide_sidebar_icon {
-        height: 4vh;
-        width: 4vh;
+        height: 3.5vh;
+        width: 3.5vh;
         visibility: visible;
     }
     
@@ -1008,7 +1085,7 @@
     }
 
     .carousel_item {
-        height: 33vh;
+        height: 30vh;
         width: 55vw;
         padding: 0 5vw 0 5vw;
     }
@@ -1025,7 +1102,7 @@
     }
 
     .review_p {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .disclaimer {
@@ -1034,6 +1111,31 @@
 
     .review_form_photo {
         height: 20vh;
+    }
+
+    .review_form_units label,
+    .review_form_photo p,
+    .review_form button {
+        font-size: 1.1rem;
+    }
+
+    .benefits_time p, .benefits_price p, 
+    .benefits_safety p, .benefits_care p {
+        font-size: 1.2rem;
+    }
+
+    .answers p {
+        font-size: 1rem;
+    }
+
+    .questions_rect p {
+        font-size: 1.2rem;
+    }
+
+    .comment_form_units label,
+    .comment_form_textarea label,
+    .comment_form button {
+        font-size: 1.1rem;
     }
 }
 
@@ -1168,10 +1270,6 @@
         padding: 0 5vw 0 5vw;
     }
 
-    .review_p {
-        font-size: 1.2rem;
-    }
-
     .review_form {
         display: flex;
         flex-direction: column;
@@ -1184,7 +1282,7 @@
     }
 
     .review_p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .disclaimer {
@@ -1194,5 +1292,30 @@
 
     .review_form_photo {
         height: 25vh;
+    }
+
+    .review_form_units label,
+    .review_form_photo p,
+    .review_form button {
+        font-size: 0.9rem;
+    }
+
+    .benefits_time p, .benefits_price p, 
+    .benefits_safety p, .benefits_care p {
+        font-size: 0.9rem;
+    }
+
+    .answers p {
+        font-size: 0.9rem;
+    }
+
+    .questions_rect p {
+        font-size: 0.9rem;
+    }
+
+    .comment_form_units label,
+    .comment_form_textarea label,
+    .comment_form button {
+        font-size: 0.9rem;
     }
 }

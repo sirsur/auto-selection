@@ -43,8 +43,8 @@ export default function Feedback() {
                 }
                 transition={{ 
                     repeat: Infinity, 
-                    ease: "backInOut",
-                    duration: 40
+                    ease: "easeInOut",
+                    duration: 50
                 }}
                 variants={variants}
             >
