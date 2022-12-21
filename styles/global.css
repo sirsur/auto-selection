@@ -45,7 +45,7 @@ header {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-image: url('../public/samuele-errico-piccarini-FMbWFDiVRPs-unsplash.png');
+    background-image: url('../public/header.png');
     background-size: cover;
     background-position: center;
 }
