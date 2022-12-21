@@ -40,16 +40,6 @@ h1 {
     font-weight: 700;
 }
 
-header {
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-image: url('../public/header.png');
-    background-size: cover;
-    background-position: center;
-}
-
 h2 {
     font-size: 2.5em;
 }
@@ -160,10 +150,6 @@ footer a {
 }
 
 @media (min-width: 1026px) and (max-width: 1400px) {
-    header {
-        background-position: right 10% bottom;
-    }
-
     p {
         font-size: 1.4rem;
     }
@@ -190,10 +176,6 @@ footer a {
 }
 
 @media (min-width: 750px) and (max-width: 1025px) {
-    header {
-        background-position: right 10% bottom;
-    }
-
     p {
         font-size: 1.4rem;
     }
@@ -231,10 +213,6 @@ footer a {
 }
 
 @media (min-width: 450px) and (max-width: 750px) {
-    header {
-        background-position: right 10% bottom;
-    }
-
     h1 {
         font-size: 3.5em;
     }
@@ -270,11 +248,7 @@ footer a {
     }
 }
 
-@media (min-width: 380px) and (max-width: 450px) {
-    header {
-        background-position: right 10% bottom;
-    }
-    
+@media (min-width: 380px) and (max-width: 450px) {    
     h1 {
         font-size: 3em;
     }
@@ -315,10 +289,6 @@ footer a {
 }
 
 @media (min-width: 350px) and (max-width: 380px) {
-    header {
-        background-position: right 10% bottom;
-    }
-    
     h1 {
         font-size: 3em;
     }
@@ -359,10 +329,6 @@ footer a {
 }
 
 @media (min-width: 0px) and (max-width: 350px) {
-    header {
-        background-position: right 10% bottom;
-    }
-    
     h1 {
         font-size: 2.5em;
     }

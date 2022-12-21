@@ -15,7 +15,7 @@ export default function Header() {
     const [sideBar, setSideBar] = useState(false);
 
     return (
-        <header>
+        <header className={styles.header}>
             <Navbar />
             <button className={styles.header_button} onClick={() => setSideBar(true)}>
                 <BsTextIndentRight className={styles.header_navbar_icon} />
