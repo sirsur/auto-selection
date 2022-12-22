@@ -2,6 +2,14 @@ require('dotenv').config();
 
 const nodemailer = require('nodemailer');
 
+export const config = {
+	api: {
+		bodyParser: {
+			sizeLimit: '50mb',
+		},
+	},
+  }
+
 export default function mailer (req, res) {
 	const { 
         email,
@@ -25,19 +33,17 @@ export default function mailer (req, res) {
         }
 	});
 
+	const attachments = files.map((file) => {
+		return { path: file };
+	});
+
 	try {
 		transporter.sendMail({
 			from: process.env.EMAIL,
 			to: process.env.EMAIL,
 			subject: `Отчет по автомобилю от <${email}>`,
             text: `Здравствуйте! Присылаю отчет по автомобилю ${brand} с пробегом ${km} км, ${year} года. Мой номер телефона для связи - ${phone}.`,
-			attachments: [
-				{
-					filename: data.title + ".jpg",
-					contentType:  'image/jpeg',
-					content: new Buffer.from(req.body.image.split("base64,")[1], "base64"),
-				}
-			]
+			attachments: attachments
 		})
 	} catch (error) {
 		return res.status(500).json({ error: error.message || error.toString() })

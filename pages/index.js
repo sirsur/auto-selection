@@ -7,24 +7,6 @@ import Benefits from './components/Benefits';
 import Footer from './components/Footer';
 import Comment from './components/Comment';
 
-/*
-    TODO:
-        1. bag with sidebar scroll down (done with half!)
-        2. make animation in questions more accurate (too hard)
-        3. chech for small devices fonts sizes (done)
-        4. check in header title (make it in center) (done!)
-        5. check size of carousel items (done)
-        6. check size of sidebar icon for small devices (done)
-        7. check size of text in carousel items (done)
-        8. all tasks in review
-        9. change ease in feedbacks (done!)
-        10. make font size smaller (done)
-        11. change margin in header (done!)
-        12. change sidebar margin (done!)
-        13. bug in downloading fonts (check it after deploy all bugs)
-        14. set shadow on carousel items (don't like it)
-*/
-
 export default function Main() {
     return (
         <>

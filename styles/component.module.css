@@ -212,16 +212,6 @@
     cursor: pointer;
 }
 
-/*
-.review_form_photo:has(input:valid, input:focus) {
-    border: dashed #0080B7;
-}
-
-.review_form_photo:has(input:invalid) {
-    border: dashed #ADACAC;
-}
-*/
-
 .review_form_photo::placeholder {
     text-align: center;
     font-weight: 500;
@@ -234,9 +224,22 @@
 }
 
 .form_photos_array {
+    margin-top: 3vh;
+    padding: 1vmin 1vmax;
     font-size: 1.2rem;
     font-weight: 300;
     color: #ADACAC;
+    border: 2px solid #ADACAC;
+    border-radius: 15px;;
+}
+
+.form_files_span p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.form_photos_array button:hover {
+    color: #0080B7;
 }
 
 .review_icon {

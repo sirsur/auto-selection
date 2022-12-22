@@ -1,14 +1,17 @@
 import styles from '../../styles/component.module.css';
 import { BiPhotoAlbum } from 'react-icons/bi';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 /*
     TODO:
-    1. style valid image input
-    2. change view of added files 
-    3. send images to email
-    4. bug in deleting file
-    5. bug after delete and input file is empty
+    1. set array of images, also in api (done)
+    2. style list of files (done)
+    3. bug in deleting images (done)
+    4. style valid input file (done)
+    5. bug in sending big files (done)
+    6. add deleting from base64 files (done)
+    7. add phone number elsewhere (done)
+    8. bug in deleting and adding the same element from last position
 */
 
 export default function Review() {
@@ -18,32 +21,34 @@ export default function Review() {
     const [year, setYear] = useState("");
     const [brand, setBrand] = useState("");
     const [files, setFiles] = useState([]);
+    const [filesTitles, setFilesTitles] = useState([]);
     const [isDisabled, setIsDisabled] = useState(false);
 
     const MAX_COUNT = 5;
 
     const handleChange = (e) => {
+        let arrTitles = [...filesTitles];
+        arrTitles.push(e.target.files[0].name);
+        setFilesTitles(arrTitles);
+
+        const file = e.target.files[0];
+        let reader = new FileReader();
         let arr = [...files];
-        arr.push(e.target.files[0].name);
-        if (arr.length > MAX_COUNT) {
-            alert(`Нельзя загружать больше, чем ${MAX_COUNT} файлов`);
-            return;
-        }
-        if (arr.length === MAX_COUNT) {
-            setIsDisabled(true);
-        }
-        setFiles(arr);
+        reader.onloadend = () => {
+            arr.push(reader.result);
+            setFiles(arr);
+        };
+        reader.readAsDataURL(file);
     };
 
     const handleDelete = (file) => {
-        setFiles(
-            files.filter(a =>
-                a !== file
-            )
-        );
-        if (files.length < MAX_COUNT) {
-            setIsDisabled(false);
-        }
+        const index = filesTitles.indexOf(file);
+        let arr = [...files];
+        let arrTitles = [...filesTitles];
+        arr.splice(index, 1);
+        arrTitles.splice(index, 1);
+        setFiles(arr);
+        setFilesTitles(arrTitles);
     };
 
     const handleSubmit = (e) => {
@@ -75,14 +80,32 @@ export default function Review() {
                 setPhone('');
                 setYear('');
                 setFiles([]);
+                setFilesTitles([]);
             }
         });
     };
 
+    useEffect(() => {
+        (files.length === 0) ?
+            document.getElementById('review_file').style.border = 'dashed #ADACAC'
+        :
+            document.getElementById('review_file').style.border = 'dashed #0080B7';
+
+        (filesTitles.length === MAX_COUNT) ?
+            setIsDisabled(true)
+        :
+            setIsDisabled(false);
+
+        (files.length === 0) ?
+            document.getElementById('files_list').style.display = 'none'
+        :
+            document.getElementById('files_list').style.display = 'block';
+    });
+
     return (
         <section id = 'review'>
             <h2>Получите оценку вашего автомобиля</h2>
-            <p className={styles.review_p}>Продайте свой автомобиль в любом состоянии с выгодой. Оставьте заявку, мы оценим и предложим стоимость</p>
+            <p className={styles.review_p}>Продайте свой автомобиль в любом состоянии с выгодой. Оставьте заявку, мы оценим и предложим стоимость. Также вы можете связаться с нами по номеру телефона - <b>89873937976</b></p>
             <form className={styles.review_form} onSubmit={(e) => handleSubmit(e)} >
                 <div className={styles.review_form_units}>
                     <input 
@@ -120,7 +143,7 @@ export default function Review() {
                     />
                     <label>Номер телефона</label>
                 </div>
-                <label className={styles.review_form_photo}>
+                <label id='review_file' className={styles.review_form_photo}>
                     <input 
                         type="file" 
                         name="photo" 
@@ -139,20 +162,12 @@ export default function Review() {
                             <p>Загрузите<br />фотографии</p>
                         </>
                         :
-                        <>
-                            <div className={styles.form_photos_array}>
-                                {files?.map(file => 
-                                    <span className={styles.form_files_span} key={file}>
-                                        <p>{file}</p>
-                                        <button onClick={() => handleDelete(file)}>
-                                            x
-                                        </button>
-                                    </span>
-                                )}
-                            </div>
+                        <>  
                             { 
-                                files.length <= (MAX_COUNT - 1) && 
-                                <p>Нажмите, чтобы добавить фотографии</p>
+                                (files.length <= (MAX_COUNT - 1)) ?
+                                <p>Нажмите, чтобы<br />добавить фотографии</p>
+                                :
+                                <p>Вы добавили максимальное<br />количество фотографий</p>
                             }
                         </>
                     }
@@ -189,6 +204,16 @@ export default function Review() {
             </form>
             <div className={styles.review_disclaimer}>
                 <p className={styles.disclaimer}>Нажимая кнопку «Отправить» я подтверждаю свое ознакомление с порядком обработки персональных данных и даю свободное и осознанное согласие на их обработку, на получение информации по каналам связи, в том числе в рекламных целях</p>
+            </div>
+            <div id='files_list' className={styles.form_photos_array}>
+                {filesTitles?.map(file => 
+                    <span className={styles.form_files_span} key={file}>
+                        <p>{file}</p>
+                        <button onClick={() => handleDelete(file)}>
+                            x
+                        </button>
+                    </span>
+                )}
             </div>
         </section>
     )
