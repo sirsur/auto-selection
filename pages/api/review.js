@@ -10,7 +10,7 @@ export const config = {
 	},
   }
 
-export default function mailer (req, res) {
+export default async function mailer (req, res) {
 	const { 
         email,
         km,
@@ -37,17 +37,24 @@ export default function mailer (req, res) {
 		return { path: file };
 	});
 
-	try {
-		transporter.sendMail({
-			from: process.env.EMAIL,
-			to: process.env.EMAIL,
-			subject: `Отчет по автомобилю от <${email}>`,
-            text: `Здравствуйте! Присылаю отчет по автомобилю ${brand} с пробегом ${km} км, ${year} года. Мой номер телефона для связи - ${phone}.`,
-			attachments: attachments
-		})
-	} catch (error) {
-		return res.status(500).json({ error: error.message || error.toString() })
+	const mailData = {
+		from: process.env.EMAIL,
+		to: process.env.EMAIL,
+		subject: `Отчет по автомобилю от <${email}>`,
+		text: `Здравствуйте! Присылаю отчет по автомобилю ${brand} с пробегом ${km} км, ${year} года. Мой номер телефона для связи - ${phone}.`,
+		attachments: attachments
 	};
 
+	await new Promise((resolve, reject) => {
+		transporter.sendMail(mailData, (err, info) => {
+			if (err) {
+				console.error(err);
+				reject(err);
+			} else {
+				console.log(info);
+				resolve(info);
+			}
+		});
+	});
 	return res.status(200).json({ error: '' })
 }

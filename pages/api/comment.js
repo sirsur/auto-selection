@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const nodemailer = require('nodemailer');
 
-export default function mailer (req, res) {
+export default async function mailer (req, res) {
 	const { 
         name,
         phoneNumber,
@@ -22,16 +22,23 @@ export default function mailer (req, res) {
         }
 	});
 
-	try {
-		transporter.sendMail({
-			from: process.env.EMAIL,
+	const mailData = {
+		from: process.env.EMAIL,
 			to: process.env.EMAIL,
 			subject: `Отзыв от ${name}. Номер телефона ${phoneNumber}`,
             text: more
-		})
-	} catch (error) {
-		return res.status(500).json({ error: error.message || error.toString() })
 	};
 
+	await new Promise((resolve, reject) => {
+		transporter.sendMail(mailData, (err, info) => {
+			if (err) {
+				console.error(err);
+				reject(err);
+			} else {
+				console.log(info);
+				resolve(info);
+			}
+		});
+	});
 	return res.status(200).json({ error: '' })
 }
