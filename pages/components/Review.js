@@ -39,6 +39,8 @@ export default function Review() {
             setFiles(arr);
         };
         reader.readAsDataURL(file);
+
+        e.target.value = '';
     };
 
     const handleDelete = (file) => {
@@ -206,8 +208,8 @@ export default function Review() {
                 <p className={styles.disclaimer}>Нажимая кнопку «Отправить» я подтверждаю свое ознакомление с порядком обработки персональных данных и даю свободное и осознанное согласие на их обработку, на получение информации по каналам связи, в том числе в рекламных целях</p>
             </div>
             <div id='files_list' className={styles.form_photos_array}>
-                {filesTitles?.map(file => 
-                    <span className={styles.form_files_span} key={file}>
+                {filesTitles?.map((file, index) => 
+                    <span className={styles.form_files_span} key={index}>
                         <p>{file}</p>
                         <button onClick={() => handleDelete(file)}>
                             x
