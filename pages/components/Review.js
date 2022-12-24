@@ -42,7 +42,7 @@ export default function Review() {
         setFilesTitles(arrTitles);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         let data = {
@@ -54,21 +54,18 @@ export default function Review() {
             files
         };
 
-        fetch('/api/review', {
+        await fetch('/api/review', {
             method: 'POST',
             headers: {
               'Accept': 'application/json, text/plain, */*',
               'Content-Type': 'application/json'
             },
-            body: JSON.stringify(data)
-        }).then((res) => {
-            console.log('Response received')
-            setSent(true);
-            console.log(sent);
-            if (res.status === 200) {
+            body: JSON.stringify(data),
+        })
+        .then((response) => {
+            console.log('Result received')
+            if (response.status === 200) {
                 console.log('Response succeeded!');
-                setSent(false);
-                console.log(sent);
                 setEmail('');
                 setKm('');
                 setBrand('');
@@ -77,6 +74,9 @@ export default function Review() {
                 setFiles([]);
                 setFilesTitles([]);
             }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
         });
     };
 
@@ -96,9 +96,9 @@ export default function Review() {
         :
             document.getElementById('files_list').style.display = 'block';
 
-        if ((email !== '') && (km != '') && (phone !== '') && (year !== '') && (brand !== '') && !(sent)) {
+        if ((email !== '') && (km != '') && (phone !== '') && (year !== '') && (brand !== '')) {
             document.getElementById('button').disabled = false;
-        } else if (!((email !== '') && (km != '') && (phone !== '') && (year !== '') && (brand !== '')) && (sent)) {
+        } else if (!((email !== '') && (km != '') && (phone !== '') && (year !== '') && (brand !== ''))) {
             document.getElementById('button').disabled = true;
         }
         console.log(sent);
