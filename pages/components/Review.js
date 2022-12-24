@@ -107,7 +107,7 @@ export default function Review() {
     return (
         <section id = 'review'>
             <h2>Получите оценку вашего автомобиля</h2>
-            <p className={styles.review_p}>Продайте свой автомобиль в любом состоянии с выгодой. Оставьте заявку, мы оценим и предложим стоимость. Также вы можете связаться с нами по номеру телефона - <b>89873937976</b></p>
+            <p className={styles.review_p}>Продайте свой автомобиль в любом состоянии с выгодой. Оставьте заявку, мы оценим и предложим стоимость. Также вы можете связаться с нами по номеру телефона <b>89873937976</b> или <b>89913937457</b></p>
             <form className={styles.review_form} onSubmit={(e) => handleSubmit(e)} >
                 <div className={styles.review_form_units}>
                     <input 
