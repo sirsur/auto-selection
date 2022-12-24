@@ -10,7 +10,7 @@ export const config = {
 	},
   }
 
-export default async function mailer (req, res) {
+export default function mailer (req, res) {
 	const { 
         email,
         km,
@@ -45,16 +45,13 @@ export default async function mailer (req, res) {
 		attachments: attachments
 	};
 
-	await new Promise((resolve, reject) => {
 		transporter.sendMail(mailData, (err, info) => {
 			if (err) {
 				console.error(err);
-				reject(err);
 			} else {
 				console.log(info);
-				resolve(info);
 			}
 		});
-	});
+
 	return res.status(200).json({ error: '' })
 }

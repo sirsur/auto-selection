@@ -73,8 +73,10 @@ export default function Review() {
             },
             body: JSON.stringify(data)
         }).then((res) => {
+            document.getElementById('button').disabled = true;
             console.log('Response received')
             if (res.status === 200) {
+                document.getElementById('button').disabled = false;
                 console.log('Response succeeded!');
                 setEmail('');
                 setKm('');
@@ -102,6 +104,11 @@ export default function Review() {
             document.getElementById('files_list').style.display = 'none'
         :
             document.getElementById('files_list').style.display = 'block';
+
+        ((email !== '') && (km != '') && (phone !== '') && (year !== '') && (brand !== '')) ?
+            document.getElementById('button').disabled = false
+        :
+            document.getElementById('button').disabled = true;
     });
 
     return (
@@ -198,11 +205,7 @@ export default function Review() {
                     />
                     <label>Марка и модель</label>
                 </div>
-                {((email !== '') && (km != '') && (phone !== '') && (year !== '') && (brand !== '')) ?
-                    <button type='submit'>Отправить</button>
-                :
-                    <button type='submit' disabled>Отправить</button>
-                }
+                <button id='button' type='submit'>Отправить</button>
             </form>
             <div className={styles.review_disclaimer}>
                 <p className={styles.disclaimer}>Нажимая кнопку «Отправить» я подтверждаю свое ознакомление с порядком обработки персональных данных и даю свободное и осознанное согласие на их обработку, на получение информации по каналам связи, в том числе в рекламных целях</p>

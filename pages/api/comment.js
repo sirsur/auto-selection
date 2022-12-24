@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const nodemailer = require('nodemailer');
 
-export default async function mailer (req, res) {
+export default function mailer (req, res) {
 	const { 
         name,
         phoneNumber,
@@ -29,16 +29,12 @@ export default async function mailer (req, res) {
             text: more
 	};
 
-	await new Promise((resolve, reject) => {
 		transporter.sendMail(mailData, (err, info) => {
 			if (err) {
 				console.error(err);
-				reject(err);
 			} else {
 				console.log(info);
-				resolve(info);
 			}
 		});
-	});
 	return res.status(200).json({ error: '' })
 }
