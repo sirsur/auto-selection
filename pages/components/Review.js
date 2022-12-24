@@ -64,9 +64,11 @@ export default function Review() {
         }).then((res) => {
             console.log('Response received')
             setSent(true);
+            console.log(sent);
             if (res.status === 200) {
-                setSent(false);
                 console.log('Response succeeded!');
+                setSent(false);
+                console.log(sent);
                 setEmail('');
                 setKm('');
                 setBrand('');
@@ -94,11 +96,12 @@ export default function Review() {
         :
             document.getElementById('files_list').style.display = 'block';
 
-        if ((email !== '') && (km != '') && (phone !== '') && (year !== '') && (brand !== '')) {
+        if ((email !== '') && (km != '') && (phone !== '') && (year !== '') && (brand !== '') && !(sent)) {
             document.getElementById('button').disabled = false;
-        } else if (!((email !== '') && (km != '') && (phone !== '') && (year !== '') && (brand !== '')) && !(sent)) {
+        } else if (!((email !== '') && (km != '') && (phone !== '') && (year !== '') && (brand !== '')) && (sent)) {
             document.getElementById('button').disabled = true;
         }
+        console.log(sent);
     });
 
     return (
