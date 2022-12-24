@@ -12,6 +12,7 @@ function MyApp({ Component, pageProps }) {
         <>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>Выкуп авто в Нижнем Новгороде и области</title>
                 <meta property="og:title" content="Выкуп авто в Нижнем Новгороде и области" key="title" />
                 <meta name="description" content="Выкуп авто в Нижнем Новгороде и области. Быстрая оценка вашего автомобиля на выезде. Дорогая покупка." />
   	            <meta name="keywords" content="выкуп авто, выкуп авто в нижнем новгороде, срочный выкуп авто, выкуп авто россия, оценка авто, оценка и выкуп авто, выкуп авто с пробегом, выкуп авто бу" />

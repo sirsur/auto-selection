@@ -2,18 +2,6 @@ import styles from '../../styles/component.module.css';
 import { BiPhotoAlbum } from 'react-icons/bi';
 import { useState, useEffect } from 'react';
 
-/*
-    TODO:
-    1. set array of images, also in api (done)
-    2. style list of files (done)
-    3. bug in deleting images (done)
-    4. style valid input file (done)
-    5. bug in sending big files (done)
-    6. add deleting from base64 files (done)
-    7. add phone number elsewhere (done)
-    8. bug in deleting and adding the same element from last position
-*/
-
 export default function Review() {
     const [email, setEmail] = useState("");
     const [km, setKm] = useState("");
@@ -23,7 +11,8 @@ export default function Review() {
     const [files, setFiles] = useState([]);
     const [filesTitles, setFilesTitles] = useState([]);
     const [isDisabled, setIsDisabled] = useState(false);
-
+    const [sent, setSent] = useState(false);
+ 
     const MAX_COUNT = 5;
 
     const handleChange = (e) => {
@@ -73,10 +62,10 @@ export default function Review() {
             },
             body: JSON.stringify(data)
         }).then((res) => {
-            document.getElementById('button').disabled = true;
             console.log('Response received')
+            setSent(true);
             if (res.status === 200) {
-                document.getElementById('button').disabled = false;
+                setSent(false);
                 console.log('Response succeeded!');
                 setEmail('');
                 setKm('');
@@ -105,10 +94,11 @@ export default function Review() {
         :
             document.getElementById('files_list').style.display = 'block';
 
-        ((email !== '') && (km != '') && (phone !== '') && (year !== '') && (brand !== '')) ?
-            document.getElementById('button').disabled = false
-        :
+        if ((email !== '') && (km != '') && (phone !== '') && (year !== '') && (brand !== '')) {
+            document.getElementById('button').disabled = false;
+        } else if (!((email !== '') && (km != '') && (phone !== '') && (year !== '') && (brand !== '')) && !(sent)) {
             document.getElementById('button').disabled = true;
+        }
     });
 
     return (
