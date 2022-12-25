@@ -99,13 +99,11 @@ export default function Review() {
         :
             document.getElementById('files_list').style.display = 'block';
 
-        if ((email !== '') && (km != '') && (phone !== '') && (year !== '') && (brand !== '') && !(sent)) {
+        if ((email !== '') && (km !== '') && (phone !== '') && (year !== '') && (brand !== '') && !sent) {
             document.getElementById('button').disabled = false;
-        } else if (!((email !== '') && (km != '') && (phone !== '') && (year !== '') && (brand !== '')) && (sent)) {
+        } else if (((email === '') || (km === '') || (phone === '') || (year === '') || (brand === '')) || sent) {
             document.getElementById('button').disabled = true;
         }
-
-        console.log(sent);
     });
 
     return (
