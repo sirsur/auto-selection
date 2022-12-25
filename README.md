@@ -12,9 +12,11 @@
 </div>
 
 <h1 align="center">Дизайн</h1>
-<img align="center" width="400px" src="public/1.png">
-<img align="center" width="400px" src="public/2.png">
-<img align="center" width="400px" src="public/3.png">
-<img align="center" width="400px" src="public/4.png">
-<img align="center" width="400px" src="public/5.png">
-<img align="center" width="400px" src="public/6.png">
+<div display='flex' flex-direction='column' gap='1vh' align-items='center'>
+    <img width="400px" src="public/1.png">
+    <img width="400px" src="public/2.png">
+    <img width="400px" src="public/3.png">
+    <img width="400px" src="public/4.png">
+    <img width="400px" src="public/5.png">
+    <img width="400px" src="public/6.png">
+</div>
