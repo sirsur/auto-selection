@@ -8,35 +8,35 @@ export const config = {
 			sizeLimit: '50mb',
 		},
 	},
-  }
+};
 
 export default function mailer (req, res) {
 	const { 
-        email,
-        km,
-        phone,
-        year,
-        brand,
-        files
-    } = req.body;
-
+		email,
+		km,
+		phone,
+		year,
+		brand,
+		files
+	} = req.body;
+	
 	const transporter = nodemailer.createTransport({
 		host: 'smtp.mail.ru',
-        secure: true,
-        port: 465,
+		secure: true,
+		port: 465,
 		auth: {
 			user: process.env.EMAIL,
 			pass: process.env.PASSWORD,
 		},
-        tls: {
-            rejectUnauthorized: false,
-        }
+		tls: {
+			rejectUnauthorized: false,
+		}
 	});
-
+	
 	const attachments = files.map((file) => {
 		return { path: file };
 	});
-
+	
 	const mailData = {
 		from: process.env.EMAIL,
 		to: process.env.EMAIL,
@@ -44,14 +44,14 @@ export default function mailer (req, res) {
 		text: `Здравствуйте! Присылаю отчет по автомобилю ${brand} с пробегом ${km} км, ${year} года. Мой номер телефона для связи - ${phone}.`,
 		attachments: attachments
 	};
+	
+	transporter.sendMail(mailData, (err, info) => {
+		if (err) {
+			console.error(err);
+		} else {
+			console.log(info);
+		}
+	});
 
-		transporter.sendMail(mailData, (err, info) => {
-			if (err) {
-				console.error(err);
-			} else {
-				console.log(info);
-			}
-		});
-
-	return res.status(200).json({ error: '' })
+	return res.status(200).json({ error: '' });
 }

@@ -42,7 +42,7 @@ export default function Review() {
         setFilesTitles(arrTitles);
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
 
         let data = {
@@ -54,7 +54,9 @@ export default function Review() {
             files
         };
 
-        await fetch('/api/review', {
+        setSent(true);
+
+        fetch('/api/review', {
             method: 'POST',
             headers: {
               'Accept': 'application/json, text/plain, */*',
@@ -62,9 +64,9 @@ export default function Review() {
             },
             body: JSON.stringify(data),
         })
-        .then((response) => {
-            console.log('Result received')
-            if (response.status === 200) {
+        .then((res) => {
+            console.log('Response received');
+            if (res.status === 200) {
                 console.log('Response succeeded!');
                 setEmail('');
                 setKm('');
@@ -73,6 +75,7 @@ export default function Review() {
                 setYear('');
                 setFiles([]);
                 setFilesTitles([]);
+                setSent(false);
             }
         })
         .catch((error) => {
@@ -96,11 +99,12 @@ export default function Review() {
         :
             document.getElementById('files_list').style.display = 'block';
 
-        if ((email !== '') && (km != '') && (phone !== '') && (year !== '') && (brand !== '')) {
+        if ((email !== '') && (km != '') && (phone !== '') && (year !== '') && (brand !== '') && !(sent)) {
             document.getElementById('button').disabled = false;
-        } else if (!((email !== '') && (km != '') && (phone !== '') && (year !== '') && (brand !== ''))) {
+        } else if (!((email !== '') && (km != '') && (phone !== '') && (year !== '') && (brand !== '')) && (sent)) {
             document.getElementById('button').disabled = true;
         }
+
         console.log(sent);
     });
 
