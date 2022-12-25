@@ -29,12 +29,13 @@ export default function mailer (req, res) {
             text: more
 	};
 
-		transporter.sendMail(mailData, (err, info) => {
-			if (err) {
-				console.error(err);
-			} else {
-				console.log(info);
-			}
-		});
+	transporter.sendMail(mailData, (err, info) => {
+		if (err) {
+			console.error(err);
+		} else {
+			console.log(info);
+		}
+	});
+	
 	return res.status(200).json({ error: '' })
 }

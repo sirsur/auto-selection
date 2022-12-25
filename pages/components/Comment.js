@@ -1,10 +1,11 @@
 import styles from '../../styles/component.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Comment() {
     const [name, setName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [more, setMore] = useState('');
+    const [sent, setSent] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -32,6 +33,14 @@ export default function Comment() {
             }
         });
     };
+
+    useEffect(() => {
+        if ((name !== '') && (phoneNumber !== '') && (more !== '') && !sent) {
+            document.getElementById('comment_button').disabled = false;
+        } else if (((name === '') || (phoneNumber === '') || (more === '')) || sent) {
+            document.getElementById('comment_button').disabled = true;
+        }
+    });
 
     return (
         <section id='comment'>
@@ -74,11 +83,7 @@ export default function Comment() {
                     ></textarea>
                     <label>Расскажите нам больше...</label>
                 </div>
-                {((name !== '') && (phoneNumber !== '') && (more !== '')) ?
-                    <button type="submit">Отправить отзыв</button>
-                    :
-                    <button type="submit" disabled>Отправить отзыв</button>
-                }
+                <button id='comment_button' type="submit">Отправить отзыв</button>
             </form>
         </section>
     )
